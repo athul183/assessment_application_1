@@ -21,31 +21,31 @@ class SideDrawer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Wallet Sync",
+                    "Expense Manager",
                     style: Theme.of(context).textTheme.displayMedium!.copyWith(
                         color:
                             Theme.of(context).colorScheme.onSecondaryContainer),
                   ),
                   Text(
-                    "Personal and Shared Money Manager",
+                    "Your Personal Money Manager",
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
                         color: Theme.of(context).colorScheme.onBackground),
                   ),
                 ],
               ),
             ),
-            ListTile(
-              leading: const Icon(MaterialCommunityIcons.account_multiple),
-              title: const Text("Shared Expense Invitations"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const InvitationsScreen(),
-                  ),
-                );
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(MaterialCommunityIcons.account_multiple),
+            //   title: const Text("Shared Expense Invitations"),
+            //   onTap: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const InvitationsScreen(),
+            //       ),
+            //     );
+            //   },
+            // ),
             ListTile(
               leading: const Icon(MaterialCommunityIcons.logout),
               title: const Text("Logout"),
@@ -54,11 +54,11 @@ class SideDrawer extends StatelessWidget {
               },
             ),
             const Spacer(),
-            ListTile(
-              leading: const Icon(MaterialCommunityIcons.code_brackets),
-              title: const Text("About Developer"),
-              onTap: () {},
-            ),
+            // ListTile(
+            //   leading: const Icon(MaterialCommunityIcons.code_brackets),
+            //   title: const Text("About Developer"),
+            //   onTap: () {},
+            // ),
           ],
         ),
       );

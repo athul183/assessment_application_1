@@ -5,7 +5,6 @@ import 'package:assessment_application_1/screens/main_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final firebaseauth = FirebaseAuth.instance;
@@ -34,6 +33,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
+       
         home: StreamBuilder(
           stream: firebaseauth.authStateChanges(),
           builder: (context, snapshot) {
@@ -49,8 +49,10 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.latoTextTheme(),
         ),
         theme: ThemeData(
+          
           useMaterial3: true,
           colorScheme: kLightColorScheme,
         ),
+        debugShowCheckedModeBanner: false,
       );
 }

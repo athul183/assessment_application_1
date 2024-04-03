@@ -175,7 +175,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   : Text(isLogin ? 'Login' : 'Signup'),
             ),
             const SizedBox(height: 5),
-            TextButton(
+            MaterialButton(
               onPressed: () {
                 setState(() {
                   _usernameController.clear();
@@ -187,7 +187,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 }
               },
               child: Text(
-                  isLogin ? 'Create an account' : 'Already a user? Login!'),
+                  isLogin ? 'Create an account' : 'Already a user? Login!', style: TextStyle(fontWeight: FontWeight.bold),),
             ),
           ],
         ),
@@ -201,19 +201,25 @@ class _AuthScreenState extends State<AuthScreen> {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 60),
-            Icon(
-              MaterialCommunityIcons.wallet,
-              size: 200,
-              color: Theme.of(context).colorScheme.onBackground,
-            ),
+            
+            // Icon(
+            //   MaterialCommunityIcons.wallet,
+            //   size: 200,
+            //   color: Theme.of(context).colorScheme.onBackground,
+            // ),
+            Image.asset(
+                "assets/logo/expensetrackerlogo.png",
+                height: 180,
+                width: 180,
+              ),
             Text(
-              'Wallet Sync',
+              'Expense Manager',
               style: Theme.of(context)
                   .textTheme
                   .displayMedium!
                   .copyWith(color: Theme.of(context).colorScheme.onBackground),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 25),
             content,
           ],
         ),

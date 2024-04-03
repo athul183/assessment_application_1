@@ -1,3 +1,5 @@
+import 'package:assessment_application_1/graph/bar_graph.dart';
+import 'package:assessment_application_1/screens/graph.dart';
 import 'package:assessment_application_1/screens/shared_expense_screen.dart';
 import 'package:assessment_application_1/screens/trans_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     if (_selectedPageIndex == 1) {
       setState(() {
-        _activePage = const SharedExpenseScreen();
+        _activePage = const MyGraph();
       });
     }
     return Scaffold(
@@ -30,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
             _selectedPageIndex = index;
             _selectedPageIndex == 0
                 ? _activePage = TransScreen()
-                : _activePage = const SharedExpenseScreen();
+                : _activePage = const MyGraph();
           });
         },
         currentIndex: _selectedPageIndex,
@@ -39,8 +41,8 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(MaterialCommunityIcons.swap_horizontal_bold),
               label: 'Personal Expense'),
           BottomNavigationBarItem(
-            icon: Icon(MaterialCommunityIcons.account_group),
-            label: 'Shared Expenses',
+            icon: Icon(MaterialCommunityIcons.graphql),
+            label: 'Stats',
           ),
         ],
       ),

@@ -45,6 +45,8 @@ dependencies:
   flutter_dotenv: ^5.1.0
   dynamic_color: ^1.6.8
   icons_flutter: ^0.0.4
+  fl_chart: ^0.66.2
+  random_color: ^1.0.6-nullsafety
 
 dev_dependencies:
   flutter_test:
